@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sabor MasterClass</title>
+
+  <!-- Bootstrap + FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Home.css" />
+</head>
+<body>
+
+  <!-- Navbar (fija arriba) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 navbar-lg fixed-top">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="imagenes/logo-sabor.jpg" height="50" class="me-2" />
+      <span class="fs-4">S a b o r M a s t e r C l a s s</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-3">
+        <li class="nav-item"><a href="Home.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="Nosotros.html" class="nav-link">Nosotros</a></li>
+        <li class="nav-item"><a href="Cursos.html" class="nav-link">Más cursos</a></li>
+        <li class="nav-item"><a href="Tutores.html" class="nav-link" >Nuestros Tutores</a></li>
+        <li class="nav-item"><a href="Contacto.html"  class="nav-link">Contacto</a></li>
+      </ul>
+      <a href="login.html"class="btn btn-outline-light me-2">LOGIN</a>
+      <a href="registro.html" class="btn btn-light">REGISTRO</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-img-section d-flex align-items-center justify-content-center text-center text-white">
+    <div class="overlay"></div>
+    <div class="hero-content position-relative z-1">
+      <h1 class="display-4 fw-bold">Descubre el CHEF que llevas dentro </h1>
+      <p class="lead pulse">
+        <i class="fas fa-utensils me-2"></i>
+        Cursos online de alta calidad impartidos por expertos gastronómicos
+        <i class="fas fa-utensils me-2"></i>
+      </p>
+    </div>
+  </section>
+
+  <main class="container mt-1 pt-1 mb-3">
+    <div class="row">
+     <!-- Noticias -->
+<div class="col-md-4">
+  <h2 class="fw-bold mb-4">Noticias Gastronómicas</h2>
+  <p class="text-muted mb-4">Mantente al día con las tendencias y novedades del mundo culinario.</p>
+
+  <div class="row row-cols-1 row-cols-md-2 g-3 noticia-row">
+    <!-- Noticia 1 -->
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-title">La Cocina Sostenible Gana Terreno</h6>
+          <p class="card-text text-muted small">Restaurantes y chefs apuestan por ingredientes locales y métodos ecológicos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noticia 2 -->
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-title">Nuevas Tendencias en Platos de Autor</h6>
+          <p class="card-text text-muted small">Fusión de sabores asiáticos y latinos marcarán la pauta en 2025.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noticia 3 -->
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-title">Master Class Lanza Nuevos Cursos</h6>
+          <p class="card-text text-muted small">Aprende de los mejores chefs con programas para todos los niveles.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noticia 4 -->
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-title">Panadería Artesanal en Auge</h6>
+          <p class="card-text text-muted small">El pan de masa madre sigue conquistando a los amantes de lo natural.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noticia 5 -->
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-title">Evento Gastronómico del Año</h6>
+          <p class="card-text text-muted small">No te pierdas la feria culinaria más grande de la región.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noticia 6 -->
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-title">Nos visita el Chef Nelson Rodríguez</h6>
+          <p class="card-text text-muted small">El chef protagonista del programa de concursos nos da tips para mejorar en la cocina.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- Cursos -->
+      <div class="col-md-8">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="fw-bold">Cursos Destacados</h2>
+          <div class="input-group w-50">
+            <input type="text" class="form-control form-busqueda" placeholder="Buscar cursos...">
+            <span class="input-group-text bg-white border-start-0"><i class="fas fa-search text-muted"></i></span>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Tarjetas de cursos -->
+          <!-- Curso 1 -->
+            <div class="col-md-6">
+              <div class="card curso-card h-100">
+                <img src="imagenes/reposteria_creativa.jpg" class="card-img-top curso-img" alt="Repostería">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="card-title">Repostería Creativa</h6>
+                    <span class="badge bg-warning text-dark"><i class="fas fa-star"></i> 5.0</span>
+                  </div>
+                  <p class="card-text text-white small">🍰 Domina el arte de la repostería con técnicas profesionales para crear postres irresistibles.</p>
+                  <p class="fw-bold">$295.000</p>
+                  <button class="btn btn-purple" onclick="window.location.href='login.html'">
+                  <i class="fas fa-plus"></i>
+                  </button>
+                </div>              
+              </div>
+            </div>
+
+          <!-- Curso 2 -->
+          <div class="col-md-6">
+            <div class="card curso-card h-100">
+              <img src="imagenes/cocina_internacional.jpg" class="card-img-top curso-img" alt="Internacional">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="card-title">Cocina internacional</h6>
+                  <span class="badge bg-warning text-dark"><i class="fas fa-star"></i> 5.0</span>
+                </div>
+                <p class="card-text text-white small">🌍 Aprende a preparar platos icónicos de diferentes culturas y lleva tu cocina a otro nivel.</p>
+                <p class="fw-bold">$134.000</p>
+                <button class="btn btn-purple" onclick="window.location.href='login.html'">
+                <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curso 3 -->
+          <div class="col-md-6">
+            <div class="card curso-card h-100">
+              <img src="imagenes/cocina_japonesa.webp" class="card-img-top curso-img" alt="Japonesa">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="card-title">Cocina Japonesa</h6>
+                  <span class="badge bg-warning text-dark"><i class="fas fa-star"></i> 5.0</span>
+                </div>
+                <p class="card-text text-white small">🍣 Aprende sushi, ramen y otras delicias japonesas con técnicas profesionales.</p>
+                <p class="fw-bold">$154.000</p>
+                <button class="btn btn-purple" onclick="window.location.href='login.html'">
+                <i class="fas fa-plus"></i>
+                </button>              </div>
+            </div>
+          </div>
+
+          <!-- Curso 4 -->
+          <div class="col-md-6">
+            <div class="card curso-card h-100">
+              <img src="imagenes/parrila_bbq.jpg" class="card-img-top curso-img" alt="Parrilla">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="card-title">Parrilla BBQ</h6>
+                  <span class="badge bg-warning text-dark"><i class="fas fa-star"></i> 5.0</span>
+                </div>
+                <p class="card-text text-white small">🔥 Aprende técnicas de parrilla, ahumado y salsas irresistibles.</p>
+                <p class="fw-bold">$235.000</p>
+                <button class="btn btn-purple" onclick="window.location.href='login.html'">
+                <i class="fas fa-plus"></i>
+                </button>              </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer fijo abajo -->
+  <footer class="bg-dark text-center fixed-bottom">
+    <div class="container d-flex justify-content-center gap-4 py-3">
+      <i class="fab fa-whatsapp text-white fs-4"></i>
+      <i class="fab fa-facebook text-white fs-4"></i>
+      <i class="fab fa-x-twitter text-white fs-4"></i>
+      <i class="fab fa-instagram text-white fs-4"></i>
+      <i class="fab fa-youtube text-white fs-4"></i>
+      <i class="fab fa-tiktok text-white fs-4"></i>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
