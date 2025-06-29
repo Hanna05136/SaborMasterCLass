@@ -1,0 +1,73 @@
+.navbar-lg {
+  height: 90px;
+  background-color: rgb(36, 25, 70) !important;
+  
+  
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+/* Contenedor que ocupa toda la pantalla y centra el contenido */
+.contact-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 15px;
+}
+
+/* Contenedor interno que define el ancho total del bloque (70%) */
+.contact-container {
+  width: 70%;
+  max-width: 1000px;
+}
+
+/* Fila sin márgenes laterales */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 15px;
+}
+
+/* Estilo general para las cards */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: large;
+  height: 100%;
+}
+
+/* Card de formulario con fondo claro */
+.card-form {
+  background-color: #f8f9fa;
+}
+
+/* Card de información de contacto */
+.contact-info-card {
+  background-color: rgb(36, 25, 70);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  min-height: 400px;
+  font-size: 1.6rem;
+}
+
+/* Asegura que el contenido esté centrado dentro de la card */
+.contact-info-card .card-body {
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Enlaces de iconos en blanco */
+.contact-info-card a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info-card a:hover {
+  color: #ccc;
+}
