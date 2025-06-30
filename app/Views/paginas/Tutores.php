@@ -1,6 +1,18 @@
 <?= $this->extend('Plantilla/layout') ?>
 <?= $this->section('contenido') ?>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/Tutores.css" />
+</head>
+
+
+
+
   <!-- Hero -->
   <section class="hero-img-section d-flex align-items-center justify-content-center text-center text-white">
     <div class="overlay"></div>
@@ -21,7 +33,7 @@
       <!-- Tutor -->
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Arlie Cruz">
+          <img src="imagenes/tutor-2.jpg" class="card-img-top curso-img" alt="Arlie Cruz">
           <div class="card-body">
             <h6 class="card-title">Arlie Cruz</h6>
             <p class="text-warning small">⭐ 5.0 &nbsp; 🏆 12 años &nbsp; 📚 7 cursos</p>
@@ -33,7 +45,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Sofía Martínez">
+          <img src="imagenes/tutor-1.jpg" class="card-img-top curso-img" alt="Sofía Martínez">
           <div class="card-body">
             <h6 class="card-title">Sofía Martínez</h6>
             <p class="text-warning small">⭐ 4.0 &nbsp; 🏆 10 años &nbsp; 📚 5 cursos</p>
@@ -45,7 +57,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Diego Fernández">
+          <img src="imagenes/tutor-4.jpg" class="card-img-top curso-img" alt="Diego Fernández">
           <div class="card-body">
             <h6 class="card-title">Diego Fernández</h6>
             <p class="text-warning small">⭐ 4.0 &nbsp; 🏆 8 años &nbsp; 📚 12 cursos</p>
@@ -57,7 +69,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Mariana Ríos">
+          <img src="imagenes/tutor-3.jpg" class="card-img-top curso-img" alt="Mariana Ríos">
           <div class="card-body">
             <h6 class="card-title">Mariana Ríos</h6>
             <p class="text-warning small">⭐ 4.5 &nbsp; 🏆 22 años &nbsp; 📚 8 cursos</p>
@@ -69,7 +81,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Hiroshi Tanaka">
+          <img src="imagenes/tutor-5.jpg" class="card-img-top curso-img" alt="Hiroshi Tanaka">
           <div class="card-body">
             <h6 class="card-title">Hiroshi Tanaka</h6>
             <p class="text-warning small">⭐ 5.0 &nbsp; 🏆 13 años &nbsp; 📚 9 cursos</p>
@@ -81,7 +93,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Martín Gutiérrez">
+          <img src="imagenes/tutor-6.jpg" class="card-img-top curso-img" alt="Martín Gutiérrez">
           <div class="card-body">
             <h6 class="card-title">Martín Gutiérrez</h6>
             <p class="text-warning small">⭐ 4.5 &nbsp; 🏆 6 años &nbsp; 📚 2 cursos</p>
@@ -93,7 +105,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Camila Fernández">
+          <img src="imagenes/tutor-7.jpg" class="card-img-top curso-img" alt="Camila Fernández">
           <div class="card-body">
             <h6 class="card-title">Camila Fernández</h6>
             <p class="text-warning small">⭐ 5.0 &nbsp; 🏆 4 años &nbsp; 📚 5 cursos</p>
@@ -105,7 +117,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="José Ramírez">
+          <img src="imagenes/tutor-9.jpg" class="card-img-top curso-img" alt="José Ramírez">
           <div class="card-body">
             <h6 class="card-title">José Ramírez</h6>
             <p class="text-warning small">⭐ 5.0 &nbsp; 🏆 10 años &nbsp; 📚 7 cursos</p>
@@ -117,7 +129,7 @@
 
       <div class="col-md-4">
         <div class="card curso-card h-100">
-          <img src="imagenes/tutor1.jpg" class="card-img-top curso-img" alt="Sofía Lombardi">
+          <img src="imagenes/tutor-8.jpg" class="card-img-top curso-img" alt="Sofía Lombardi">
           <div class="card-body">
             <h6 class="card-title">Sofía Lombardi</h6>
             <p class="text-warning small">⭐ 5.0 &nbsp; 🏆 18 años &nbsp; 📚 9 cursos</p>

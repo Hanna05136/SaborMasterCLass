@@ -121,11 +121,7 @@
                 </div>
                 <p class="card-text text-white small">🌍 Aprende a preparar platos icónicos de diferentes culturas y lleva tu cocina a otro nivel.</p>
                 <p class="fw-bold">$134.000</p>
-                                <a href=<?php echo base_url('/login'); ?> class="btn btn-purple"> <i class="fas fa-plus"></i> </a>
-
-
-                <i class="fas fa-plus"></i>
-                </button>
+                <a href=<?php echo base_url('/login'); ?> class="btn btn-purple"> <i class="fas fa-plus"></i> </a>
               </div>
             </div>
           </div>
@@ -141,11 +137,7 @@
                 </div>
                 <p class="card-text text-white small">🍣 Aprende sushi, ramen y otras delicias japonesas con técnicas profesionales.</p>
                 <p class="fw-bold">$154.000</p>
-                <button class="btn btn-purple" onclick="window.location.href='<?php base_url('/login'); ?>'">
-                  <i class="fas fa-plus"></i>
-                </button>
-                <i class="fas fa-plus"></i>
-                </button>
+                <button class="btn btn-purple" onclick="window.location.href='<?php base_url('/login'); ?>'"><i class="fas fa-plus"></i>
               </div>
             </div>
           </div>
@@ -156,15 +148,12 @@
               <img src="imagenes/parrila_bbq.jpg" class="card-img-top curso-img" alt="Parrilla">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="card-title">Parrilla BBQ</h6>
+                  <h6 clazss="card-title">Parrilla BBQ</h6>
                   <span class="badge bg-warning text-dark"><i class="fas fa-star"></i> 5.0</span>
                 </div>
                 <p class="card-text text-white small">🔥 Aprende técnicas de parrilla, ahumado y salsas irresistibles.</p>
                 <p class="fw-bold">$235.000</p>
-                                <a href=<?php echo base_url('/login'); ?> class="btn btn-purple"> <i class="fas fa-plus"></i> </a>
-
-                <i class="fas fa-plus"></i>
-                </button>
+                <a href=<?php echo base_url('/login'); ?> class="btn btn-purple"> <i class="fas fa-plus"></i> </a>
               </div>
             </div>
           </div>
@@ -174,4 +163,3 @@
     </div>
   </main>
 <?= $this->endSection() ?>
-
