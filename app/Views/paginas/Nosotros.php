@@ -79,7 +79,7 @@
                 <div class="card testimonial-card">
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-2">
-                            <img src="carlos.jpg" class="rounded-circle me-3" width="50" height="50" alt="Carlos Méndez">
+                            <img src="imagenes/Persona1.jpg" class="rounded-circle me-3" width="50" height="50" alt="Carlos Méndez">
                             <div>
                                 <strong>Carlos Méndez</strong><br>
                                 <small>Senior Marketing Specialist</small>

@@ -12,3 +12,4 @@ $routes->get('/Nosotros', 'Nosotros::index');
 $routes->get('/Cursos', 'Cursos::index');
 $routes->get('/Tutores', 'Tutores::index');
 $routes->get('/Contacto', 'Contacto::index');
+$routes->get('/Estudiante', 'Empleados::estudiante');

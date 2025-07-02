@@ -20,25 +20,29 @@
             <div class="card-body">
               <h3 class="mb-3 fw-bold">Contacto</h3>
               <p class="text-muted">¿Tienes preguntas? ¡Envíanos un mensaje!</p>
-              <form>
+              <form onsubmit="return validarFormulario()">
                 <div class="row mb-3">
                   <div class="col">
                     <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control" placeholder="Nombre" />
+                    <input type="text" class="form-control" id="nombres" placeholder="Nombre" required maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo letras" />
+                    <span class="error" id="error-nombres"></span>
                   </div>
                   <div class="col">
                     <label class="form-label">Apellido</label>
-                    <input type="text" class="form-control" placeholder="Apellido" />
+                    <input type="text" class="form-control" id="apellidos" placeholder="Apellido" required maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo letras" />
+                    <span class="error" id="error-apellidos"></span>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="Correo electrónico" />
+                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required />
+                    <span class="error" id="error-email"></span>
                   </div>
                   <div class="col">
                     <label class="form-label">Número de contacto</label>
-                    <input type="text" class="form-control" placeholder="Teléfono" />
+                    <input type="text" class="form-control" id="numero" placeholder="Teléfono" required maxlength="10" pattern="\d{1,10}" title="Debe ingresar solo números (máximo 10 dígitos)" />
+                    <span class="error" id="error-telefono"></span>
                   </div>
                 </div>
                 <div class="mb-3">
@@ -62,7 +66,8 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Mensaje</label>
-                  <textarea class="form-control" rows="4" placeholder="Escribe aquí tu mensaje"></textarea>
+                  <input type="text" class="form-control" id="mensaje" placeholder="Escribe aquí tu mensaje" required />
+                  <span class="error" id="error-mensaje"></span>
                 </div>
                 <button type="submit" class="btn btn-custom px-4">Enviar mensaje</button>
               </form>
@@ -93,4 +98,74 @@
       </div>
     </div>
   </div>
+
+  <script>
+    
+    function validarFormulario() {
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmar").value;
+      let valido = true;
+
+      // Validar términos y condiciones
+      if (!terminos.checked) {
+        document.getElementById("error-terminos").textContent = "Acepta los términos.";
+        valido = false;
+      } else {
+        document.getElementById("error-terminos").textContent = "";
+      }
+
+      return valido;
+    }
+
+    // Validación en vivo para nombres
+    document.getElementById("nombres").addEventListener("input", function() {
+      const valor = this.value;
+      const error = document.getElementById("error-nombres");
+      const regex = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]*$/;
+      error.textContent = regex.test(valor) ? "" : "Solo se permiten letras y espacios.";
+    });
+
+    // Validación en vivo para apellidos
+    document.getElementById("apellidos").addEventListener("input", function() {
+      const valor = this.value;
+      const error = document.getElementById("error-apellidos");
+      const regex = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]*$/;
+      error.textContent = regex.test(valor) ? "" : "Solo se permiten letras y espacios.";
+    });
+
+    // Validaciones en vivo      
+        document.getElementById("email").addEventListener("blur", function() {
+            const valor = this.value.trim();
+            const error = document.getElementById("error-email");
+            // Extraer dominio del email
+            const partes = valor.split("@");
+
+            if (partes.length === 2) {
+                error.textContent = "";
+            } else {
+                error.textContent = "Correo inválido. Debe usar @";
+            }
+        });
+
+        document.getElementById("Telefono").addEventListener("submit", function(event) {
+      const input = document.getElementById("numero").value;
+      const mensaje = document.getElementById("mensaje");
+
+      // Validar si el input contiene solo dígitos
+      if (!/^\d{1,10}$/.test(input)) {
+        event.preventDefault();
+        mensaje.textContent = "Debe ingresar solo números (máximo 10 dígitos).";
+      } else {
+        mensaje.textContent = "";
+      }
+    });
+// Validacion en vivo para el mensaje
+        document.getElementById("mensaje").addEventListener("input", function() {
+            const valor = this.value;
+            const error = document.getElementById("error-mensaje");
+            error.textContent = valor.length > 0 ? "" : "El mensaje no puede estar vacío.";
+        });
+  </script>
+
+
 <?= $this->endSection() ?>
