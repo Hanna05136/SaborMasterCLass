@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/Home.css" />
 </head>
-<style> /* Estilo solo para errores*/
-        .error {
-    color: red ;
-    font-size: 0.8rem ;
-    display: block ;
-    margin: 4px 0 8px 0;
-}
+<style>
+    /* Estilo solo para errores*/
+    .error {
+        color: red;
+        font-size: 0.8rem;
+        display: block;
+        margin: 4px 0 8px 0;
+    }
 </style>
+
 <body class="no-footer"> <!-- Clase que quita espacio si no hay footer -->
 
     <!-- Navbar (fija arriba) -->
@@ -39,17 +41,17 @@
                 <div class="card shadow w-75 p-4">
                     <div class="card-body">
                         <h1 class="mb-4 text-center">Iniciar Sesión</h1>
-                        <form onsubmit="return validarFormulario()">
+                        <form method="post" action="<?= base_url('login/acceder'); ?>">
                             <div class="mb-3">
                                 <label for="correo" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" required />
+                                <input type="email" class="form-control" id="email" name="usuario" placeholder="Ingresa tu correo" required />
                                 <span class="error" id="error-email"></span>
                             </div>
 
                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
-                                    <span class="error" id="error-password"></span>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña" required />
+                                <span class="error" id="error-password"></span>
                             </div>
                             <button type="submit" class="btn btn-dark w-100">Ingresar</button>
 

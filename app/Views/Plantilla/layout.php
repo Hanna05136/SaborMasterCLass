@@ -57,3 +57,29 @@
 </body>
 
 </html>
+
+<!--Footer con links 
+<footer class="bg-dark text-center fixed-bottom">
+    <div class="container d-flex justify-content-center gap-4 py-3">
+        <a href="https://wa.me/+0573134697632" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp text-white fs-4"></i>
+        </a>
+        <a href="https://www.facebook.com/sabormasterclass@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook text-white fs-4"></i>
+        </a>
+        <a href="https://twitter.com/TUUSUARIODETWITTER" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <i class="fab fa-x-twitter text-white fs-4"></i>
+        </a>
+        <a href="https://www.instagram.com/TUUSUARIODEINSTAGRAM" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram text-white fs-4"></i>
+        </a>
+        <a href="https://www.youtube.com/TUUSUARIODEYOUTUBE" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="fab fa-youtube text-white fs-4"></i>
+        </a>
+        <a href="https://www.tiktok.com/@TUUSUARIODETIKTOK" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i class="fab fa-tiktok text-white fs-4"></i>
+        </a>
+    </div>
+</footer>
+
+-->

@@ -1,0 +1,155 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9ff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* CABECERA */
+.header {
+  background-color: #1e225a;
+  color: white;
+  padding: 2rem;
+  background-image: url('../imagenes/bg-japon.png'); /* opcional: patrón o ilustración culinaria */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 6px solid #ffd233;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #e0e0ff;
+  max-width: 700px;
+}
+
+/* INFO INSTRUCTORA / ESTADÍSTICAS */
+.info-curso {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.info-curso a {
+  color: #ffd233;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CONTENIDO GENERAL */
+.contenido {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.publico,
+.temario {
+  margin-bottom: 2.5rem;
+}
+
+.temario h2,
+.publico h2 {
+  color: #1e225a;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ffd233;
+  padding-bottom: 0.5rem;
+}
+
+/* CADA MÓDULO */
+.modulo {
+  background-color: #fffaf0;
+  border-left: 6px solid #ffd233;
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.modulo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.modulo h3 {
+  margin-top: 0;
+  color: #003366;
+  font-size: 1.2rem;
+}
+
+.modulo ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.modulo li {
+  list-style: circle;
+  margin-bottom: 0.4rem;
+}
+
+/* CAJA LATERAL: VIDEO O INSCRIPCIÓN */
+.caja-curso {
+  position: sticky;
+  top: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: auto;
+  border: 2px solid #ffd233;
+  z-index: 99;
+}
+
+.caja-curso iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 315px;
+}
+
+
+.caja-curso button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ffd233;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.caja-curso button:hover {
+  background-color: #e6be00;
+}
+
+.caja-curso ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.caja-curso li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.caja-curso li::before {
+  content: '🍣';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
