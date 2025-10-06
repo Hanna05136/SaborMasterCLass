@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout1}">
+
+    <head>
+        <title layout:fragment="titulo">Panel de Administración</title>
+    </head>
+
+    <body>
+        <div layout:fragment="contenido">
+            <h2 class="mt-5 mb-4 text-center fw-bold">Panel de
+                Administración</h2>
+
+            <!-- TARJETAS DE RESUMEN -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <div class="card p-3 text-center">
+                        <i
+                            class="bi bi-people-fill display-4 text-primary mb-2"></i>
+                        <h5 class="fw-bold">Total Usuarios</h5>
+                        <p class="fs-3">1,250</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center">
+                        <i
+                            class="bi bi-journal-check display-4 text-success mb-2"></i>
+                        <h5 class="fw-bold">Cursos Activos</h5>
+                        <p class="fs-3">35</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center">
+                        <i
+                            class="bi bi-person-badge-fill display-4 text-warning mb-2"></i>
+                        <h5 class="fw-bold">Tutores Registrados</h5>
+                        <p class="fs-3">12</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center">
+                        <i
+                            class="bi bi-person-plus-fill display-4 text-danger mb-2"></i>
+                        <h5 class="fw-bold">Nuevas Inscripciones</h5>
+                        <p class="fs-3">87</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GESTIÓN DE USUARIOS -->
+            <div class="card p-4 mb-5">
+                <div
+                    class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="fw-bold">Gestión de Usuarios</h4>
+                    <div class="d-flex gap-2">
+                        <a th:href="@{/personas/nueva}"
+                            class="btn btn-success">➕ Añadir Usuario</a>
+                        <a th:href="@{/personas/exportarExcel}"
+                            class="btn btn-outline-success">⬇️ Exportar
+                            Excel</a>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"
+                        placeholder="Buscar usuario por nombre o email...">
+                    <button class="btn btn-outline-secondary" type="button"><i
+                            class="bi bi-search"></i></button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Documento</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="persona : ${personas}">
+                                <td th:text="${persona.id}"></td>
+                                <td th:text="${persona.documento}"></td>
+                                <td th:text="${persona.nombre}"></td>
+                                <td th:text="${persona.email}"></td>
+                                <td class="text-center">
+                                    <a
+                                        th:href="@{/personas/editar/{id}(id=${persona.id})}"
+                                        class="btn btn-warning btn-sm">✏️
+                                        Editar</a>
+                                    <a
+                                        th:href="@{/personas/eliminar/{id}(id=${persona.id})}"
+                                        onclick="return confirm('¿Seguro que deseas eliminar esta persona?')"
+                                        class="btn btn-danger btn-sm">🗑️
+                                        Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- GESTIÓN DE CURSOS -->
+            <div class="card p-4 mb-5">
+                <div
+                    class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="fw-bold">Gestión de Cursos</h4>
+                    <a th:href="@{/admin/cursos/form}" class="btn btn-success">➕
+                        Añadir Curso</a>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"
+                        placeholder="Buscar curso por título o tutor...">
+                    <button class="btn btn-outline-secondary" type="button"><i
+                            class="bi bi-search"></i></button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Duración</th>
+                                <th>Número Curso</th>
+                                <th>Nombre</th>
+                                <th>Detalle</th>
+                                <th>Costo</th>
+                                <th>Nivel</th>
+                                <th>Categoría</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="curso : ${cursos}">
+                                <td th:text="${curso.id}"></td>
+                                <td th:text="${curso.duracion}"></td>
+                                <td th:text="${curso.numcurso}"></td>
+                                <td th:text="${curso.nombre}"></td>
+                                <td th:text="${curso.detalle}"></td>
+                                <td th:text="${curso.costo}"></td>
+                                <td th:text="${curso.aprendizaje}"></td>
+                                <td th:text="${curso.categoria}"></td>
+                                <td>
+                                    <a
+                                        th:href="@{admin/cursos/form/{id}(id=${curso.id})}"
+                                        class="btn btn-warning">Editar</a>
+                                    <a
+                                        th:href="@{/admin/cursos{id}(id=${curso.id})}"
+                                        class="btn btn-danger">Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

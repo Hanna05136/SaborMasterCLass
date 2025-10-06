@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout}">
+
+<body>
+    <div layout:fragment="contenido">
+        <title layout:fragment="titulo">Sobre Nosotros - Tutores</title>
+
+        <!-- Hero -->
+        <!-- <section class="hero-img-section d-flex align-items-center justify-content-center text-center text-white"
+            th:style="'background-image: url(' + @{/imagenes/platos.png} + ')'">
+            <div class="hero-content position-relative z-1">
+                <h1 class="display-4 fw-bold">Conoce a nuestros
+                    expertos</h1>
+                <p class="lead">
+                    <i class="fas fa-hat-chef me-2"></i> Tutores apasionados
+                    por el arte culinario <i class="fas fa-hat-chef ms-2"></i>
+                </p>
+            </div>
+        </section> -->
+
+        <!-- SECCIÓN NOSOTROS -->
+        <section class="container my-5">
+            <h2 class="text-center fw-bold mb-4">Nosotros</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="lead">Master Class te ofrece cursos innovadores para perfeccionar tus habilidades culinarias. Organizados por niveles, tipos de cocina y recetas, garantizan un aprendizaje personalizado. Además, nuestras clases son presenciales y adaptadas a tu disponibilidad, brindándote la mejor experiencia educativa.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img th:src="@{/imagenes/cocina_internacional.jpg}" alt="Cocina" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section class="container my-5">
+            <h3 class="text-center fw-bold mb-4">Lo que dicen nuestros estudiantes</h3>
+            <div class="row g-4">
+                <!-- Tarjeta 1 -->
+                <div class="col-md-6">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img th:src="@{/imagenes/tutor-1.jpg}" class="rounded-circle me-3" width="50" height="50" alt="Laura Gómez">
+                                <div>
+                                    <strong>Laura Gómez</strong><br>
+                                    <small>Amante de la gastronomía</small>
+                                </div>
+                            </div>
+                            <p>"Una experiencia increíble. Aprendí técnicas profesionales y descubrí nuevos sabores. ¡Cocinar sea divertido y accesible!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="col-md-6">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img th:src="@{/imagenes/tutor-2.jpg}" class="rounded-circle me-3" width="50" height="50" alt="Diego Fernández">
+                                <div>
+                                    <strong>Diego Fernández</strong><br>
+                                    <small>Emprendedor</small>
+                                </div>
+                            </div>
+                            <p>"Los cursos son súper completos y bien organizados. Se entiende la parte práctica y la oportunidad de aprender desde cero. ¡Ahora cocino como un profesional!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="col-md-6">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img th:src="@{/imagenes/tutor-3.jpg}" class="rounded-circle me-3" width="50" height="50" alt="Mariana Ríos">
+                                <div>
+                                    <strong>Mariana Ríos</strong><br>
+                                    <small>Arquitecta</small>
+                                </div>
+                            </div>
+                            <p>"Una experiencia excepcional, con calidad y atención única en cada clase. Totalmente recomendado para quienes buscan lo mejor."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="col-md-6">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img th:src="@{/imagenes/tutor-4.jpg}" class="rounded-circle me-3" width="50" height="50" alt="Carlos Méndez">
+                                <div>
+                                    <strong>Carlos Méndez</strong><br>
+                                    <small>Senior Marketing Specialist</small>
+                                </div>
+                            </div>
+                            <p>"Nunca pensé que podría hacer postres tan espectaculares. ¡El método es claro y nos rendimos de primera clase! ¡Recomiendo esta escuela al 100%!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+</body>
+</html>
